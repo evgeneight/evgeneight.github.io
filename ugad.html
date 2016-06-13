@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title> Угадай число </title>
+	<style>
+		body
+			{
+				font-size: 20px;
+				color: brown;
+			}
+			b
+			{
+				color: crimson;
+			}
+			strong
+			{
+				color: coral;
+			}
+
+	</style>
+</head>
+<body>
+<script>
+	var min=1;
+	var max=100;
+	var N=Math.floor( Math.random() * (max - min + 1)) + min; //Загадываем случайное число
+	document.write("Компьютер загадал число от "+min+" до "+max+". Угадайте его за 7 попыток<br>");
+	var p=0; //Номер попытки
+	var C;
+	do
+		{
+			p=p+1; //Увеличиваем количество попыток на единицу
+			C=+prompt(p+" попытка. Ваш вариант:");
+			document.write(p+". "+C+" ");
+			if (C>N) document.write("<b>Перелет</b><br>");
+			if (C<N) document.write("<strong>Недолет</strong><br>");
+		}
+	while(C!=N && p<7);
+	if (C==N) document.write("Поздравляем! Вы угадали!");
+		else document.write("Вы проиграли! Попробуйте еще раз!");
+</script>
+</body>
+</html>

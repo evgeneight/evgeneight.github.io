@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title> Угадай число - мультиплеер </title>
+	<style>
+		body
+			{
+				font-size: 20px;
+				color: brown;
+			}
+			b
+			{
+				color: crimson;
+			}
+			strong
+			{
+				color: coral;
+			}
+
+	</style>
+</head>
+<body>
+<script>
+	var min=1;
+	var max=100;
+	var N=Math.floor( Math.random() * (max - min + 1)) + min; //Загадываем случайное число
+	document.write("Компьютер загадал число от "+min+" до "+max+". Угадайте его за 7 попыток<br>");
+	var p=0; //Номер попытки
+	var C;
+	do
+		{
+			player=0;
+			p=p+1; //Увеличиваем количество попыток на единицу
+			do {
+				player=player+1;
+			C=+prompt("Игрок "+player+": попытка "+p+". Ваш вариант:");
+			document.write("Игрок "+player+": попытка "+p+". "+C+" ");
+			if (C>N) document.write("<b>Перелет</b><br>");
+			if (C<N) document.write("<strong>Недолет</strong><br>");
+			if (player==2) document.write("<br>");
+				}
+				while(player<2 && C!=N);
+		}
+		while(C!=N && p<7);
+	if (C==N) document.write("Поздравляем! Вы угадали!");
+		else document.write("Вы проиграли! Попробуйте еще раз!");
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		
+		var result = 0;
+
+		function AskQuestions(textBoxId, answer)
+		{
+			var result = document.getElementById(textBoxId).value;
+			if(userAnswer == answer)
+				result++;
+		}
+		
+			userAnswer = document.getElementById("userAnswer2").value;
+			if(userAnswer == "елка")
+				result++;
+
+		}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="#">Загадки</a><span>/</span>
+		<a href="#">Угадайка</a><span>/</span>
+		<a href="#">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">
+	<h3>Игра в загадки</h3>
+	<div id="box">
+		<h5>Отгадай загадки!</h5>
+		<p>Сто одежек, и все без застежек</p>
+		<input type="text" id="userAnswer1">
+		<p>Зимйо и летом одним цветом</p>
+		<input type="text" id="userAnswer2">
+	</div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
